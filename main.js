@@ -17,9 +17,6 @@ function Student(name, age, cursosAprobados) {
   this.name = name;
   this.age = age;
   this.cursosAprobados = cursosAprobados;
-  //this.aprobarCurso = function (nuevoCurso) {
-  // this.cursosAprobados.push(nuevoCurso);
-  // }
 }
 
 Student.prototype.aprobarCurso = function (nuevoCurso) {
@@ -32,3 +29,21 @@ const dianita = new Student("Dianita Yuvisely", 33, [
   "Curso gestion recursos humanos",
   "Cueso habilidades balnadas",
 ]);
+
+//*** PROTOTIPOS CON LA SINTAXYS DE "CLASES" ***/
+class Student2 {
+  constructor({ name, age, cursosAprobados = [] }) {
+    this.name = name;
+    this.age = age;
+    this.cursosAprobados = cursosAprobados;
+  }
+  aprobarCurso(nuevoCurso) {
+    this.cursosAprobados.push(nuevoCurso);
+  }
+}
+
+const estebitan = new Student2({
+  name: "Esteban",
+  age: 34,
+  email: "estebitan0489@gmail.com",
+});
